@@ -1,13 +1,25 @@
 \documentclass{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[left=0.5in, right=0.5in, top=1in, bottom=1in]{geometry}
-\usepackage{mathtools}
-\usepackage{amssymb}
+\usepackage[left=0.25in, right=0.25in, top=0.5in, bottom=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{titling}
 \usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{amssymb}
 \usepackage{enumitem}
 \setlist[enumerate]{font=\bfseries}
+
+\newcommand{\RN}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+  \edef\arraystretch{#1}%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
+\makeatother
 
 \title{UE Lineare Algebra f{\"u}r PhysikerInnen \\ "Sch{\"o}ne L{\"o}sung"}
 
@@ -26,15 +38,19 @@
 \postdate{\par\end{center}}
 
 \begin{document}
-\setlength{\droptitle}{-20pt}
+\setlength{\droptitle}{100pt}
 \maketitle
 \clearpage
 
+% ----------------
 % exercise section
+% ----------------
 \begin{description}
     
+    % --------------------
     % exercise description
-    \item[Aufgabe 7.2.] Betrachte die reellen Matrizen \\
+    % --------------------
+    \item[Aufgabe 7.2.] Betrachte die reellen Matrizen
         \[  X=\begin{pmatrix}
                 4 & 2 & 3 \\   
                 2 & 1 & 2 \\   
@@ -46,7 +62,7 @@
                 -1 & 2 & 5 \\   
             \end{pmatrix}
         \]
-        \par aus Aufgabe 6.4. Nutze die Lösung dieser Aufgabe, um wie im Beweis von Satz 4.48 in der
+        aus Aufgabe 6.4. Nutze die Lösung dieser Aufgabe, um wie im Beweis von Satz 4.48 in der
         Vorlesung geordnete Basen \(B, C, B', C'\) von \(\mathbb{R}^{3}\) zu bestimmen, bez{\"u}glich 
         der \(X\) und \(X'\) in Normalform sind, d.h.
         \[  [X]_{BC}=\begin{pmatrix}
@@ -63,8 +79,10 @@
         \bigskip
         \bigskip
 
+        % ----------------
         % solution outline
-        \underline{L{\"o}sungsweg} - Folgende Schritte f{\"u}hren uns zu den gesuchten Basen: \\
+        % ----------------
+        \underline{L{\"o}sungsweg} - Folgende Schritte f{\"u}hren uns zu den gesuchten Basen:
         \begin{enumerate}
             \item W{\"a}hle beliebige geordnete Basen \(C' \in V, B' \in W\).
             \item Sei \(A=[f]_{B'C'}\) \\
@@ -86,19 +104,26 @@
         \medskip
 
         Der zugeh{\"o}rige Beweis entstammt der begleitenden Vorlesung 
-        (\href{https://moodle.univie.ac.at/mod/streamlti/view.php?id=19314913}{moodle - Video on Demand}) \\
-        F{\"u}r eine schriftliche Form kann auch \cite{fredenhagen} herangezogen werden. \\
-        \bigskip
-        \bigskip
+        (\href{https://moodle.univie.ac.at/mod/streamlti/view.php?id=19314913}{moodle - Video on Demand}).
 
+        F{\"u}r eine schriftliche Form kann auch \cite{fredenhagen} herangezogen werden.
+        \bigskip
+        \bigskip
+        
+        % --------
         % solution
-        \underline{L{\"o}sung} \\
+        % --------
+        \begin{minipage}{0.9\textwidth}
+        \underline{L{\"o}sung}
         \medskip
 
+        % ----------------------------
+        % left minipage - solution "X"
+        % ----------------------------
         \fbox{
-        \begin{minipage}{0.9\textwidth}
+        \begin{minipage}{0.5\linewidth}
+        \begin{flushleft}\(X\):\end{flushleft}
         \vspace{1em}
-        
         \( \begin{pmatrix} 
         1 & 0 & 0 \\
         0 & 1 & 0 \\
@@ -113,17 +138,237 @@
         1 & 0 & 0 \\
         0 & 1 & 0 \\
         0 & 0 & 1
-        \end{pmatrix}
-        \) 
-        \vrule
+        \end{pmatrix}\qquad \) 
+        \vrule \(\, :\RN{2}-\frac{1}{2}\RN{1}\)
+        \vspace{1em}
+        
+        \( \begin{pmatrix} 
+        1 & 0 & 0 \\
+        -\frac{1}{2} & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix},
+        \begin{pmatrix} 
+        4 & 2 & 3 \\
+        0 & 0 & \frac{1}{2} \\
+        1 & 2 & 1
+        \end{pmatrix},
+        \quad{-}\qquad\) 
+        \vrule \(\, :\RN{3}-\frac{1}{4}\RN{1}\)
+        \vspace{1em}
+       
+        \( \begin{pmatrix}[1.2] 
+        1 & 0 & 0 \\
+        -\frac{1}{2} & 1 & 0 \\
+        -\frac{1}{4} & 0 & 1
+        \end{pmatrix},
+        \begin{pmatrix}[1.2] 
+        4 & 2 & 3 \\
+        0 & 0 & \frac{1}{2} \\
+        0 & \frac{3}{2} & \frac{1}{4}
+        \end{pmatrix},
+        \quad{-}\qquad\) 
+        \vrule \(\, :\RN{2} \rightleftarrows \RN{3}\)
+        \vspace{1em}
+        
+        \( \begin{pmatrix}[1.2] 
+        1 & 0 & 0 \\
+        -\frac{1}{4} & 0 & 1 \\
+        -\frac{1}{2} & 1 & 0
+        \end{pmatrix},
+        \begin{pmatrix}[1.2] 
+        4 & 2 & 3 \\
+        0 & \frac{3}{2} & \frac{1}{4} \\
+        0 & 0 & \frac{1}{2}
+        \end{pmatrix},
+        \quad{-}\qquad\) 
+            \vrule \(\, :\)\begin{minipage}{1cm}
+            \tiny
+            \begin{align*}
+                & \frac{1}{4}\!*\!\RN{1}\\
+                & \frac{2}{3}\!*\!\RN{2}\\
+                & 2\!*\!\RN{3}
+            \end{align*}
+        \end{minipage}
+        \vspace{1em}
+
+        \( \underbrace{
+        \begin{pmatrix}[1.2] 
+        \frac{1}{4} & 0 & 0 \\
+        -\frac{1}{6} & 0 & \frac{2}{3} \\
+        -1 & 2 & 0
+        \end{pmatrix}}_{\textcolor{TealBlue}{S}},
+        \underbrace{\begin{pmatrix}[1.2] 
+        \colorbox{TealBlue}{1} & \frac{1}{2} & \frac{3}{4} \\
+        0 & \colorbox{TealBlue}{1} & \frac{1}{6} \\
+        0 & 0 & \colorbox{TealBlue}{1}
+        \end{pmatrix}}_{\textcolor{TealBlue}{\tilde{X}_{1}}},
+        \quad{-}\qquad\) 
+        \vspace{1em}
+
+        \textcolor{TealBlue}{\rule{\textwidth}{0.4pt}}
         
         \vspace{1em}
-        \end{minipage}}
+        \( \quad{-}\qquad,
+        \begin{pmatrix}[1.2] 
+        1 & \frac{1}{2} & \frac{3}{4} \\
+        0 & 1 & \frac{1}{6} \\
+        0 & 0 & 1
+        \end{pmatrix},
+        \begin{pmatrix} 
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix}\qquad \) 
+        \vrule \(\, :\RN{2}-\frac{1}{2}\RN{1}\)
+        \vspace{1em}
+        
+        \( \quad{-}\qquad,
+        \begin{pmatrix}[1.2] 
+        1 & 0 & \frac{3}{4} \\
+        0 & 1 & \frac{1}{6} \\
+        0 & 0 & 1
+        \end{pmatrix},
+        \begin{pmatrix} 
+        1 & -\frac{1}{2} & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix}\qquad \) 
+        \vrule \(\, :\RN{3}-\frac{3}{4}\RN{1}\)
+        \vspace{1em}
+        
+        \( \quad{-}\qquad,
+        \begin{pmatrix}[1.2] 
+        1 & 0 & 0 \\
+        0 & 1 & \frac{1}{6} \\
+        0 & 0 & 1
+        \end{pmatrix},
+        \begin{pmatrix}[1.2] 
+        1 & -\frac{1}{2} & -\frac{3}{4} \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix}\qquad \) 
+        \vrule \(\, :\RN{3}-\frac{1}{6}\RN{2}\)
+        \vspace{1em}
+         
+        \( \quad{-}\qquad,
+        \underbrace{\begin{pmatrix}[1.2] 
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix}}_{\textcolor{TealBlue}{\tilde{X}_{2}}},
+        \underbrace{\begin{pmatrix}[1.2] 
+        1 & -\frac{1}{2} & -\frac{3}{4} \\
+        0 & 1 & -\frac{1}{6} \\
+        0 & 0 & 1
+        \end{pmatrix}}_{\textcolor{TealBlue}{T^{-1}}}\qquad \) 
+        \vspace{1em}
 
-\end{description}
+        \textcolor{TealBlue}{\rule{\textwidth}{0.4pt}}
+        
+        \vspace{1em}
+        damit:
+        \begin{enumerate}
+        \item \( \begin{pmatrix}[1.2] 
+        \frac{1}{4} & 0 & 0 \\
+        -\frac{1}{6} & 0 & \frac{2}{3} \\
+        -1 & 2 & 0
+        \end{pmatrix}
+        \begin{pmatrix}[1.2] 
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}[1.2] 
+        1 & -\frac{1}{2} & -\frac{3}{4} \\
+        0 & 1 & -\frac{1}{6} \\
+        0 & 0 & 1
+        \end{pmatrix} \!=\!SXT^{-1} \) 
+        \item Die geordneten Basen
+            \( B=\left(
+            \begin{pmatrix}[1.2]
+            \frac{1}{4} \\
+            -\frac{1}{6} \\
+            -1
+            \end{pmatrix},
+            \begin{pmatrix}[1.2]
+            0 \\
+            0 \\
+            2
+            \end{pmatrix},
+            \begin{pmatrix}[1.2]
+            0 \\
+            \frac{2}{3} \\
+            0 \end{pmatrix} \right)
+            \) und \( C=\left(
+            \begin{pmatrix}[1.2]
+            1 \\
+            0 \\
+            0
+            \end{pmatrix},
+            \begin{pmatrix}[1.2]
+            -\frac{1}{2} \\
+            1 \\
+            0
+            \end{pmatrix},
+            \begin{pmatrix}[1.2]
+            -\frac{2}{3} \\
+            -\frac{1}{6} \\
+            1 \end{pmatrix} \right)
+            \)
+        \end{enumerate}
+        \end{minipage}%
+        }
+        \hspace{0.1em}
+        % ------------------------------    
+        % right minipage - solution "X'"    
+        % ------------------------------    
+        \fbox{
+        \begin{minipage}{0.5\linewidth}
+        \begin{flushleft}\(X'\):\end{flushleft}
+        \vspace{1em}
+        \( \begin{pmatrix} 
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix},
+        \begin{pmatrix} 
+        4 & 2 & 3 \\
+        2 & 1 & 2 \\
+        1 & 2 & 1
+        \end{pmatrix},
+        \begin{pmatrix} 
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix} \) 
+        \unskip \vrule
+        \vspace{1em}
+        \( \begin{pmatrix} 
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix},
+        \begin{pmatrix} 
+        4 & 2 & 3 \\
+        2 & 1 & 2 \\
+        1 & 2 & 1
+        \end{pmatrix},
+        \begin{pmatrix} 
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix} \) 
+        \vrule 
+        \vspace{1em}
+        \end{minipage}%
+        }
+        \end{minipage}%
+    \end{description}
 \clearpage
 
+% --------------------
 % bibliography section
+% --------------------
 \begin{thebibliography}{1}
     \bibitem{fredenhagen} Stefan Fredenhagen, 2022, \href{https://moodle.univie.ac.at/mod/resource/view.php?id=19312584}{Skriptum - Lineare Algebra}.
 \end{thebibliography}
