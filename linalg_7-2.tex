@@ -1,10 +1,11 @@
 \documentclass{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[left=0.5in, right=0.5in]{geometry}
+\usepackage[left=0.5in, right=0.5in, top=1in, bottom=1in]{geometry}
 \usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{titling}
+\usepackage{hyperref}
 \usepackage{enumitem}
 \setlist[enumerate]{font=\bfseries}
 
@@ -16,17 +17,115 @@
 \and Benedikt Chizzola \\ a12201744
 \and Christoph Gro{\ss} \\ a01025119}
 
-\posttitle{\par\end{center}}
+\pretitle{\begin{center}\huge}
+\posttitle{\par\end{center}\vspace{1em}}
+\preauthor{\begin{center}\large\begin{tabular}[t]{c}}
+\postauthor{\end{tabular}\par\end{center}}
+\renewcommand\maketitlehookc{\vspace{1em}}
+\predate{\begin{center}\Large}
+\postdate{\par\end{center}}
 
 \begin{document}
 \setlength{\droptitle}{-20pt}
 \maketitle
 \clearpage
 
-%\section*{X.Y Beispielangabe}
-\begin{enumerate}
-	\item[\fbox{7.2}]
-		\(\forall x,y \in X: \quad\ x \leq y \)
-\end{enumerate}
+% exercise section
+\begin{description}
+    
+    % exercise description
+    \item[Aufgabe 7.2.] Betrachte die reellen Matrizen \\
+        \[  X=\begin{pmatrix}
+                4 & 2 & 3 \\   
+                2 & 1 & 2 \\   
+                1 & 2 & 1 \\   
+            \end{pmatrix},\quad
+            X'=\begin{pmatrix}
+                1 & 2 & 3 \\   
+                2 & 3 & 4 \\   
+                -1 & 2 & 5 \\   
+            \end{pmatrix}
+        \]
+        \par aus Aufgabe 6.4. Nutze die Lösung dieser Aufgabe, um wie im Beweis von Satz 4.48 in der
+        Vorlesung geordnete Basen \(B, C, B', C'\) von \(\mathbb{R}^{3}\) zu bestimmen, bez{\"u}glich 
+        der \(X\) und \(X'\) in Normalform sind, d.h.
+        \[  [X]_{BC}=\begin{pmatrix}
+                1 & 0 & 0 \\   
+                0 & 1 & 0 \\   
+                0 & 0 & 1 \\   
+            \end{pmatrix},\quad
+            [X']_{B',C'}=\begin{pmatrix}
+                1 & 0 & 0 \\   
+                0 & 1 & 0 \\   
+                0 & 0 & 0 \\   
+            \end{pmatrix}.
+        \]
+        \bigskip
+        \bigskip
+
+        % solution outline
+        \underline{L{\"o}sungsweg} - Folgende Schritte f{\"u}hren uns zu den gesuchten Basen: \\
+        \begin{enumerate}
+            \item W{\"a}hle beliebige geordnete Basen \(C' \in V, B' \in W\).
+            \item Sei \(A=[f]_{B'C'}\) \\
+                (Annahme: \(X=[X]_{Std,Std}=M^{Std}_{Std}(F_{x})\) und \(X'=[X']_{Std,Std}=M^{Std}_{Std}(F_{x'})\)
+                f{\"u}r diese Aufgabe) 
+            \item Schreibe \(E'_{n},A,E''_{n}\) an.    
+            \item Wende elementare Zeilenumformungen an:
+                \begin{enumerate}
+                    \item \(A \rightarrow \tilde{A}_{1}\), wobei \(\tilde{A}_{1}\) in normierter Zeilenstufenform.
+                    \item \(E'_{n} \rightarrow S\)
+                \end{enumerate}
+            \item Wende elementare Spaltenumformungen an:
+                \begin{enumerate}
+                    \item \(\tilde{A}_{1} \rightarrow \tilde{A}_{2}\), wobei \(\tilde{A}_{2}\) in Normalform.
+                    \item \(E''_{n} \rightarrow T^{-1}\)
+                \end{enumerate}
+            \item \(SAT^{-1}=[A]_{BC}\) bez{\"u}glich neuer Basen \(B,C\).
+        \end{enumerate}
+        \medskip
+
+        Der zugeh{\"o}rige Beweis entstammt der begleitenden Vorlesung 
+        (\href{https://moodle.univie.ac.at/mod/streamlti/view.php?id=19314913}{moodle - Video on Demand}) \\
+        F{\"u}r eine schriftliche Form kann auch \cite{fredenhagen} herangezogen werden. \\
+        \bigskip
+        \bigskip
+
+        % solution
+        \underline{L{\"o}sung} \\
+        \medskip
+
+        \fbox{
+        \begin{minipage}{0.9\textwidth}
+        \vspace{1em}
+        
+        \( \begin{pmatrix} 
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix},
+        \begin{pmatrix} 
+        4 & 2 & 3 \\
+        2 & 1 & 2 \\
+        1 & 2 & 1
+        \end{pmatrix},
+        \begin{pmatrix} 
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix}
+        \) 
+        \vrule
+        
+        \vspace{1em}
+        \end{minipage}}
+
+\end{description}
+\clearpage
+
+% bibliography section
+\begin{thebibliography}{1}
+    \bibitem{fredenhagen} Stefan Fredenhagen, 2022, \href{https://moodle.univie.ac.at/mod/resource/view.php?id=19312584}{Skriptum - Lineare Algebra}.
+\end{thebibliography}
 
 \end{document}
