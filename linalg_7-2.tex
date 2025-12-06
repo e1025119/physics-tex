@@ -121,249 +121,245 @@
         % left minipage - solution "X"
         % ----------------------------
         \fbox{
-        \begin{minipage}{0.5\linewidth}
-        \begin{flushleft}\(X\):\end{flushleft}
-        \vspace{1em}
-        \( \begin{pmatrix} 
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix},
-        \begin{pmatrix} 
-        4 & 2 & 3 \\
-        2 & 1 & 2 \\
-        1 & 2 & 1
-        \end{pmatrix},
-        \begin{pmatrix} 
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix}\qquad \) 
-        \vrule \(\, :\RN{2}-\frac{1}{2}\RN{1}\)
-        \vspace{1em}
-        
-        \( \begin{pmatrix} 
-        1 & 0 & 0 \\
-        -\frac{1}{2} & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix},
-        \begin{pmatrix} 
-        4 & 2 & 3 \\
-        0 & 0 & \frac{1}{2} \\
-        1 & 2 & 1
-        \end{pmatrix},
-        \quad{-}\qquad\) 
-        \vrule \(\, :\RN{3}-\frac{1}{4}\RN{1}\)
-        \vspace{1em}
-       
-        \( \begin{pmatrix}[1.2] 
-        1 & 0 & 0 \\
-        -\frac{1}{2} & 1 & 0 \\
-        -\frac{1}{4} & 0 & 1
-        \end{pmatrix},
-        \begin{pmatrix}[1.2] 
-        4 & 2 & 3 \\
-        0 & 0 & \frac{1}{2} \\
-        0 & \frac{3}{2} & \frac{1}{4}
-        \end{pmatrix},
-        \quad{-}\qquad\) 
-        \vrule \(\, :\RN{2} \rightleftarrows \RN{3}\)
-        \vspace{1em}
-        
-        \( \begin{pmatrix}[1.2] 
-        1 & 0 & 0 \\
-        -\frac{1}{4} & 0 & 1 \\
-        -\frac{1}{2} & 1 & 0
-        \end{pmatrix},
-        \begin{pmatrix}[1.2] 
-        4 & 2 & 3 \\
-        0 & \frac{3}{2} & \frac{1}{4} \\
-        0 & 0 & \frac{1}{2}
-        \end{pmatrix},
-        \quad{-}\qquad\) 
-            \vrule \(\, :\)\begin{minipage}{1cm}
-            \tiny
-            \begin{align*}
-                & \frac{1}{4}\!*\!\RN{1}\\
-                & \frac{2}{3}\!*\!\RN{2}\\
-                & 2\!*\!\RN{3}
-            \end{align*}
-        \end{minipage}
-        \vspace{1em}
-
-        \( \underbrace{
-        \begin{pmatrix}[1.2] 
-        \frac{1}{4} & 0 & 0 \\
-        -\frac{1}{6} & 0 & \frac{2}{3} \\
-        -1 & 2 & 0
-        \end{pmatrix}}_{\textcolor{TealBlue}{S}},
-        \underbrace{\begin{pmatrix}[1.2] 
-        \colorbox{TealBlue}{1} & \frac{1}{2} & \frac{3}{4} \\
-        0 & \colorbox{TealBlue}{1} & \frac{1}{6} \\
-        0 & 0 & \colorbox{TealBlue}{1}
-        \end{pmatrix}}_{\textcolor{TealBlue}{\tilde{X}_{1}}},
-        \quad{-}\qquad\) 
-        \vspace{1em}
-
-        \textcolor{TealBlue}{\rule{\textwidth}{0.4pt}}
-        
-        \vspace{1em}
-        \( \quad{-}\qquad,
-        \begin{pmatrix}[1.2] 
-        1 & \frac{1}{2} & \frac{3}{4} \\
-        0 & 1 & \frac{1}{6} \\
-        0 & 0 & 1
-        \end{pmatrix},
-        \begin{pmatrix} 
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix}\qquad \) 
-        \vrule \(\, :\RN{2}-\frac{1}{2}\RN{1}\)
-        \vspace{1em}
-        
-        \( \quad{-}\qquad,
-        \begin{pmatrix}[1.2] 
-        1 & 0 & \frac{3}{4} \\
-        0 & 1 & \frac{1}{6} \\
-        0 & 0 & 1
-        \end{pmatrix},
-        \begin{pmatrix} 
-        1 & -\frac{1}{2} & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix}\qquad \) 
-        \vrule \(\, :\RN{3}-\frac{3}{4}\RN{1}\)
-        \vspace{1em}
-        
-        \( \quad{-}\qquad,
-        \begin{pmatrix}[1.2] 
-        1 & 0 & 0 \\
-        0 & 1 & \frac{1}{6} \\
-        0 & 0 & 1
-        \end{pmatrix},
-        \begin{pmatrix}[1.2] 
-        1 & -\frac{1}{2} & -\frac{3}{4} \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix}\qquad \) 
-        \vrule \(\, :\RN{3}-\frac{1}{6}\RN{2}\)
-        \vspace{1em}
-         
-        \( \quad{-}\qquad,
-        \underbrace{\begin{pmatrix}[1.2] 
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix}}_{\textcolor{TealBlue}{\tilde{X}_{2}}},
-        \underbrace{\begin{pmatrix}[1.2] 
-        1 & -\frac{1}{2} & -\frac{3}{4} \\
-        0 & 1 & -\frac{1}{6} \\
-        0 & 0 & 1
-        \end{pmatrix}}_{\textcolor{TealBlue}{T^{-1}}}\qquad \) 
-        \vspace{1em}
-
-        \textcolor{TealBlue}{\rule{\textwidth}{0.4pt}}
-        
-        \vspace{1em}
-        damit:
-        \begin{enumerate}
-        \item \( \begin{pmatrix}[1.2] 
-        \frac{1}{4} & 0 & 0 \\
-        -\frac{1}{6} & 0 & \frac{2}{3} \\
-        -1 & 2 & 0
-        \end{pmatrix}
-        \begin{pmatrix}[1.2] 
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix}
-        \begin{pmatrix}[1.2] 
-        1 & -\frac{1}{2} & -\frac{3}{4} \\
-        0 & 1 & -\frac{1}{6} \\
-        0 & 0 & 1
-        \end{pmatrix} \!=\!SXT^{-1} \) 
-        \item Die geordneten Basen
-            \( B=\left(
-            \begin{pmatrix}[1.2]
-            \frac{1}{4} \\
-            -\frac{1}{6} \\
-            -1
-            \end{pmatrix},
-            \begin{pmatrix}[1.2]
-            0 \\
-            0 \\
-            2
-            \end{pmatrix},
-            \begin{pmatrix}[1.2]
-            0 \\
-            \frac{2}{3} \\
-            0 \end{pmatrix} \right)
-            \) und \( C=\left(
-            \begin{pmatrix}[1.2]
-            1 \\
-            0 \\
-            0
-            \end{pmatrix},
-            \begin{pmatrix}[1.2]
-            -\frac{1}{2} \\
-            1 \\
-            0
-            \end{pmatrix},
-            \begin{pmatrix}[1.2]
-            -\frac{2}{3} \\
-            -\frac{1}{6} \\
-            1 \end{pmatrix} \right)
-            \)
-        \end{enumerate}
-        \end{minipage}%
-        }
+            \begin{minipage}{0.5\linewidth}
+                \begin{flushleft}\(X\):\end{flushleft}
+                    \begin{flalign*} 
+                        & \begin{pmatrix} 
+                            1 & 0 & 0 \\
+                            0 & 1 & 0 \\
+                            0 & 0 & 1
+                        \end{pmatrix},
+                        \begin{pmatrix} 
+                            4 & 2 & 3 \\
+                            2 & 1 & 2 \\
+                            1 & 2 & 1
+                        \end{pmatrix},
+                        \begin{pmatrix} 
+                            1 & 0 & 0 \\
+                            0 & 1 & 0 \\
+                            0 & 0 & 1
+                        \end{pmatrix}\qquad\qquad
+                        \vrule :\RN{2}-\frac{1}{2}\RN{1} &
+                    \end{flalign*}
+                    \begin{flalign*} 
+                        & \begin{pmatrix} 
+                            1 & 0 & 0 \\
+                            -\frac{1}{2} & 1 & 0 \\
+                            0 & 0 & 1
+                        \end{pmatrix},
+                        \begin{pmatrix} 
+                            4 & 2 & 3 \\
+                            0 & 0 & \frac{1}{2} \\
+                            1 & 2 & 1
+                        \end{pmatrix},
+                        \quad{-}\qquad\qquad
+                        \vrule :\RN{3}-\frac{1}{4}\RN{1} &
+                    \end{flalign*} 
+                    \begin{flalign*} 
+                        & \begin{pmatrix}[1.2] 
+                            1 & 0 & 0 \\
+                            -\frac{1}{2} & 1 & 0 \\
+                            -\frac{1}{4} & 0 & 1
+                        \end{pmatrix},
+                        \begin{pmatrix}[1.2] 
+                            4 & 2 & 3 \\
+                            0 & 0 & \frac{1}{2} \\
+                            0 & \frac{3}{2} & \frac{1}{4}
+                        \end{pmatrix},
+                        \quad{-}\qquad\qquad
+                        \vrule :\RN{2} \rightleftarrows \RN{3} &
+                    \end{flalign*} 
+                    \begin{flalign*} 
+                        & \begin{pmatrix}[1.2] 
+                            1 & 0 & 0 \\
+                            -\frac{1}{4} & 0 & 1 \\
+                            -\frac{1}{2} & 1 & 0
+                        \end{pmatrix},
+                        \begin{pmatrix}[1.2] 
+                            4 & 2 & 3 \\
+                            0 & \frac{3}{2} & \frac{1}{4} \\
+                            0 & 0 & \frac{1}{2}
+                        \end{pmatrix},
+                        \quad{-}\qquad\qquad
+                        \vrule : \begin{aligned}
+                            & \frac{1}{4}\!*\!\RN{1}\\
+                            & \frac{2}{3}\!*\!\RN{2}\\
+                            & 2\!*\!\RN{3}
+                        \end{aligned} &
+                    \end{flalign*}
+                    \begin{flalign*} 
+                        & \underbrace{
+                            \begin{pmatrix}[1.2] 
+                                \frac{1}{4} & 0 & 0 \\
+                                -\frac{1}{6} & 0 & \frac{2}{3} \\
+                                -1 & 2 & 0
+                            \end{pmatrix}}_{\textcolor{TealBlue}{S}},
+                        \underbrace{\begin{pmatrix}[1.2] 
+                            \colorbox{TealBlue}{1} & \frac{1}{2} & \frac{3}{4} \\
+                            0 & \colorbox{TealBlue}{1} & \frac{1}{6} \\
+                            0 & 0 & \colorbox{TealBlue}{1}
+                        \end{pmatrix}}_{\textcolor{TealBlue}{\tilde{X}_{1}}},
+                        \quad{-}\qquad &
+                    \end{flalign*} 
+                    \textcolor{TealBlue}{\rule{\textwidth}{0.4pt}}
+                    \begin{flalign*}
+                        & \quad{-}\qquad,
+                        \begin{pmatrix}[1.2] 
+                            1 & \frac{1}{2} & \frac{3}{4} \\
+                            0 & 1 & \frac{1}{6} \\
+                            0 & 0 & 1
+                        \end{pmatrix},
+                        \begin{pmatrix} 
+                            1 & 0 & 0 \\
+                            0 & 1 & 0 \\
+                            0 & 0 & 1
+                        \end{pmatrix}\qquad\qquad 
+                        \vrule :\RN{2}-\frac{1}{2}\RN{1} &
+                    \end{flalign*} 
+                    \begin{flalign*}
+                        & \quad{-}\qquad,
+                        \begin{pmatrix}[1.2] 
+                            1 & 0 & \frac{3}{4} \\
+                            0 & 1 & \frac{1}{6} \\
+                            0 & 0 & 1
+                        \end{pmatrix},
+                        \begin{pmatrix} 
+                            1 & -\frac{1}{2} & 0 \\
+                            0 & 1 & 0 \\
+                            0 & 0 & 1
+                        \end{pmatrix}\qquad\qquad 
+                        \vrule :\RN{3}-\frac{3}{4}\RN{1} &
+                    \end{flalign*}
+                    \begin{flalign*}
+                        & \quad{-}\qquad,
+                        \begin{pmatrix}[1.2] 
+                            1 & 0 & 0 \\
+                            0 & 1 & \frac{1}{6} \\
+                            0 & 0 & 1
+                        \end{pmatrix},
+                        \begin{pmatrix}[1.2] 
+                            1 & -\frac{1}{2} & -\frac{3}{4} \\
+                            0 & 1 & 0 \\
+                            0 & 0 & 1
+                        \end{pmatrix}\qquad
+                        \vrule :\RN{3}-\frac{1}{6}\RN{2} &
+                    \end{flalign*} 
+                    \begin{flalign*}
+                        & \quad{-}\qquad,
+                        \underbrace{\begin{pmatrix}[1.2] 
+                            1 & 0 & 0 \\
+                            0 & 1 & 0 \\
+                            0 & 0 & 1
+                        \end{pmatrix}}_{\textcolor{TealBlue}{\tilde{X}_{2}}},
+                        \underbrace{\begin{pmatrix}[1.2] 
+                            1 & -\frac{1}{2} & -\frac{3}{4} \\
+                            0 & 1 & -\frac{1}{6} \\
+                            0 & 0 & 1
+                        \end{pmatrix}}_{\textcolor{TealBlue}{T^{-1}}}\qquad &
+                    \end{flalign*}
+                \end{minipage}%
+                }
         \hspace{0.1em}
         % ------------------------------    
         % right minipage - solution "X'"    
         % ------------------------------    
         \fbox{
-        \begin{minipage}{0.5\linewidth}
-        \begin{flushleft}\(X'\):\end{flushleft}
-        \vspace{1em}
-        \( \begin{pmatrix} 
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix},
-        \begin{pmatrix} 
-        4 & 2 & 3 \\
-        2 & 1 & 2 \\
-        1 & 2 & 1
-        \end{pmatrix},
-        \begin{pmatrix} 
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix} \) 
-        \unskip \vrule
-        \vspace{1em}
-        \( \begin{pmatrix} 
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix},
-        \begin{pmatrix} 
-        4 & 2 & 3 \\
-        2 & 1 & 2 \\
-        1 & 2 & 1
-        \end{pmatrix},
-        \begin{pmatrix} 
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-        \end{pmatrix} \) 
-        \vrule 
-        \vspace{1em}
-        \end{minipage}%
+            \begin{minipage}{0.5\linewidth}
+                \begin{flushleft}\(X'\):\end{flushleft}
+                    \vspace{1em}
+                    \( \begin{pmatrix} 
+                        1 & 0 & 0 \\
+                        0 & 1 & 0 \\
+                        0 & 0 & 1
+                    \end{pmatrix},
+                    \begin{pmatrix} 
+                        4 & 2 & 3 \\
+                        2 & 1 & 2 \\
+                        1 & 2 & 1
+                    \end{pmatrix},
+                    \begin{pmatrix} 
+                        1 & 0 & 0 \\
+                        0 & 1 & 0 \\
+                        0 & 0 & 1
+                    \end{pmatrix} \) 
+                    \unskip \vrule
+                    \vspace{1em}
+                    \( \begin{pmatrix} 
+                        1 & 0 & 0 \\
+                        0 & 1 & 0 \\
+                        0 & 0 & 1
+                    \end{pmatrix},
+                    \begin{pmatrix} 
+                        4 & 2 & 3 \\
+                        2 & 1 & 2 \\
+                        1 & 2 & 1
+                    \end{pmatrix},
+                    \begin{pmatrix} 
+                        1 & 0 & 0 \\
+                        0 & 1 & 0 \\
+                        0 & 0 & 1
+                    \end{pmatrix} \) 
+                    \vrule 
+                    \vspace{1em}
+            \end{minipage}%
         }
         \end{minipage}%
-    \end{description}
+
+	\clearpage
+
+    \vspace{1em}
+    Damit ergeben sich:
+    \begin{enumerate}
+        \item \( \begin{pmatrix}[1.2] 
+                \frac{1}{4} & 0 & 0 \\
+                -\frac{1}{6} & 0 & \frac{2}{3} \\
+                -1 & 2 & 0
+        \end{pmatrix}
+        \begin{pmatrix}[1.2] 
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}[1.2] 
+            1 & -\frac{1}{2} & -\frac{3}{4} \\
+            0 & 1 & -\frac{1}{6} \\
+            0 & 0 & 1
+        \end{pmatrix} \!=\!SXT^{-1} \) 
+    \item Die geordneten Basen
+        \( B=\left(
+        \begin{pmatrix}[1.2]
+            \frac{1}{4} \\
+            -\frac{1}{6} \\
+            -1
+        \end{pmatrix},
+        \begin{pmatrix}[1.2]
+            0 \\
+            0 \\
+            2
+        \end{pmatrix},
+        \begin{pmatrix}[1.2]
+            0 \\
+            \frac{2}{3} \\
+        0 \end{pmatrix} \right)
+        \) und \( C=\left(
+        \begin{pmatrix}[1.2]
+            1 \\
+            0 \\
+            0
+        \end{pmatrix},
+        \begin{pmatrix}[1.2]
+            -\frac{1}{2} \\
+            1 \\
+            0
+        \end{pmatrix},
+        \begin{pmatrix}[1.2]
+            -\frac{2}{3} \\
+            -\frac{1}{6} \\
+        1 \end{pmatrix} \right)
+        \)
+    \end{enumerate}
+
+\end{description}
 \clearpage
 
 % --------------------
