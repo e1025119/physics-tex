@@ -104,7 +104,8 @@
         \medskip
 
         Der zugeh{\"o}rige Beweis entstammt der begleitenden Vorlesung 
-        (\href{https://moodle.univie.ac.at/mod/streamlti/view.php?id=19314913}{moodle - Video on Demand}).
+        (\href{https://moodle.univie.ac.at/mod/streamlti/view.php?id=19314913}{moodle - Video on Demand} 
+        (07.11.2025, ab 01:18:00)).
 
         F{\"u}r eine schriftliche Form kann auch \cite{fredenhagen} herangezogen werden.
         \bigskip
@@ -113,15 +114,17 @@
         % --------
         % solution
         % --------
-        \begin{minipage}{0.9\textwidth}
+        \noindent\begin{minipage}[0.9\textheight]{0.9\textwidth}
         \underline{L{\"o}sung}
+        
+        \bigskip
         \medskip
 
         % ----------------------------
         % left minipage - solution "X"
         % ----------------------------
         \fbox{
-            \begin{minipage}{0.5\linewidth}
+            \begin{minipage}[t][0.95\textheight][t]{0.5\textwidth}
                 \begin{flushleft}\(X\):\end{flushleft}
                     \begin{flalign*} 
                         & \begin{pmatrix} 
@@ -259,12 +262,11 @@
                     \end{flalign*}
                 \end{minipage}%
                 }
-        \hspace{0.1em}
         % ------------------------------    
         % right minipage - solution "X'"    
         % ------------------------------    
         \fbox{
-            \begin{minipage}{0.5\linewidth}
+            \begin{minipage}[t][0.95\textheight][t]{0.5\textwidth}
                 \begin{flushleft}\(X'\):\end{flushleft}
                     \begin{flalign*} 
                         & \begin{pmatrix} 
@@ -400,15 +402,15 @@
                         -1 & 2 & 0
                 \end{pmatrix}
                 \begin{pmatrix}[1.2] 
-                    1 & 0 & 0 \\
-                    0 & 1 & 0 \\
-                    0 & 0 & 1
+                    4 & 2 & 3 \\
+                    2 & 1 & 2 \\
+                    1 & 2 & 1
                 \end{pmatrix}
                 \begin{pmatrix}[1.2] 
                     1 & -\frac{1}{2} & -\frac{3}{4} \\
                     0 & 1 & -\frac{1}{6} \\
                     0 & 0 & 1
-                \end{pmatrix} \!=\!SXT^{-1} \) 
+                \end{pmatrix} = SXT^{-1} = [X]_{BC}\) 
             \item Die geordneten Basen
                 \( B=\left(
                 \begin{pmatrix}[1.2]
@@ -442,56 +444,58 @@
                 1 \end{pmatrix} \right)
                 \)
             \end{enumerate}
-
+            
             und f{\"u}r \(X'\):
             
             \begin{enumerate}
                 \item \( \begin{pmatrix}[1.2] 
-                        \frac{1}{4} & 0 & 0 \\
-                        -\frac{1}{6} & 0 & \frac{2}{3} \\
-                        -1 & 2 & 0
+                        1 & 0 & 0 \\
+                        2 & -1 & 0 \\
+                        -7 & 4 & 1
                 \end{pmatrix}
                 \begin{pmatrix}[1.2] 
-                    1 & 0 & 0 \\
-                    0 & 1 & 0 \\
-                    0 & 0 & 1
+                    1 & 2 & 3 \\
+                    2 & 3 & 4 \\
+                    -1 & 2 & 5
                 \end{pmatrix}
                 \begin{pmatrix}[1.2] 
-                    1 & -\frac{1}{2} & -\frac{3}{4} \\
-                    0 & 1 & -\frac{1}{6} \\
+                    1 & 2 & 1 \\
+                    0 & 1 & -2 \\
                     0 & 0 & 1
-                \end{pmatrix} \!=\!SXT^{-1} \) 
+                \end{pmatrix} = S'X'T^{'^{-1}} = [X']_{B',C'} \) 
             \item Die geordneten Basen
-                \( B=\left(
+                \( B'=\left(
                 \begin{pmatrix}[1.2]
-                    \frac{1}{4} \\
-                    -\frac{1}{6} \\
-                    -1
+                    1 \\
+                    2 \\
+                    -7
+                \end{pmatrix},
+                \begin{pmatrix}[1.2]
+                    0 \\
+                    -1 \\
+                    4
                 \end{pmatrix},
                 \begin{pmatrix}[1.2]
                     0 \\
                     0 \\
-                    2
-                \end{pmatrix},
-                \begin{pmatrix}[1.2]
-                    0 \\
-                    \frac{2}{3} \\
-                0 \end{pmatrix} \right)
-                \) und \( C=\left(
+                    1 
+                \end{pmatrix} \right)
+                \) und \( C'=\left(
                 \begin{pmatrix}[1.2]
                     1 \\
                     0 \\
                     0
                 \end{pmatrix},
                 \begin{pmatrix}[1.2]
-                    -\frac{1}{2} \\
+                    2 \\
                     1 \\
                     0
                 \end{pmatrix},
                 \begin{pmatrix}[1.2]
-                    -\frac{2}{3} \\
-                    -\frac{1}{6} \\
-                1 \end{pmatrix} \right)
+                    1 \\
+                    -2 \\
+                    1
+                \end{pmatrix} \right)
                 \)
             \end{enumerate}
 
