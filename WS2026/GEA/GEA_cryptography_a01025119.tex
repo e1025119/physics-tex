@@ -1,35 +1,45 @@
 \documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
 \usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=1in]{geometry}
-\usepackage[dvipsnames]{xcolor}
+\usepackage[skip=12pt, indent=0pt]{parskip}
 \usepackage{titling}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[export]{adjustbox}
 \usepackage{hyperref}
 \usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{enumitem}
-\setlist[enumerate]{font=\bfseries}
+
+\definecolor{custom-blue}{RGB}{0,99,166}
 
   \title{VU Grundlagen des experimentellen Arbeitens \\ Haus{\"u}bung Kryptografie}
   \author{Christoph Gro{\ss} \\ a01025119}
-  \pretitle{\begin{center}\huge}
-  \posttitle{\par\end{center}\vspace{1em}}
-  \preauthor{\begin{center}\large\begin{tabular}[t]{c}}
-  \postauthor{\end{tabular}\par\end{center}}
-  \renewcommand\maketitlehookc{\vspace{1em}}
-  \predate{\begin{center}\Large}
-  \postdate{\par\end{center}}
+  \date{\today}
 
 \begin{document}
-\h
-\maketitle
-\clearpage
-test blablabla
-\clearpage
-%\setlength{\droptitle}{100pt}
-%\maketitle
-%\clearpage
-%test
-%\clearpage
+\begin{titlingpage}
+  \includegraphics[trim={1.2cm 2.2cm 1.2cm 2.2cm},width=6cm]{uni.png}
+  \par\rule{\textwidth}{0.5pt}
+  \begin{center}
+  \vspace*{24pt}
+  \textbf{\Large\thetitle}\\
+  \vspace*{24pt}
+  \theauthor\\
+  \vspace*{24pt}
+  \thedate
+  
+  \end{center}
+\end{titlingpage}
 
+\includegraphics[width=\textwidth]{german_letter_dist.png}
+
+Lösung:\\
+GLH SKBVLN EHVFKUHLEW QDWXUHUVFKHLQXQJHQ GXUFK EHREDFKWXQJHQ HASHULPHQWH XQG PDWKHPDWLVFKH PRGHOOH GXUFK GLH DXVZHUWXQJ YRQ GDWHQ ZHUGHQ JHVHWC XQG UHJHOQ HUNDQQW XQG YRUKHUVDJHQ JHWURIIHQ
+
+DIE PHYSIK BESCHREIBT NATURERSCHEINUNGEN DURCH BEOBACHTUNGEN EXPERIMENTE UND MATHEMATISCHE MODELLE DURCH DIE AUSWERTUNG VON DATEN WERDEN GESETZ UND REGELN ERKANNT UND VORHERSAGEN GETROFFEN
+\clearpage
 \end{document}
