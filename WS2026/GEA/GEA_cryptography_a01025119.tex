@@ -6,7 +6,7 @@
 \usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=1in]{geometry}
 \usepackage[skip=12pt, indent=0pt]{parskip}
 \usepackage{titling}
-\usepackage{graphicx}
+\usepackage{graphicx, subcaption}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[export]{adjustbox}
 \usepackage{hyperref}
@@ -16,26 +16,36 @@
 
 \definecolor{custom-blue}{RGB}{0,99,166}
 
-  \title{VU Grundlagen des experimentellen Arbeitens \\ Haus{\"u}bung Kryptografie}
-  \author{Christoph Gro{\ss} \\ a01025119}
-  \date{\today}
+\title{VU Grundlagen des experimentellen Arbeitens \\ Haus{\"u}bung Kryptografie}
+\author{Christoph Gro{\ss} \\ a01025119}
+\date{\today}
 
 \begin{document}
+
 \begin{titlingpage}
   \includegraphics[trim={1.2cm 2.2cm 1.2cm 2.2cm},width=6cm]{uni.png}
   \par\rule{\textwidth}{0.5pt}
   \begin{center}
   \vspace*{24pt}
-  \textbf{\Large\thetitle}\\
+  \textbf{\LARGE\thetitle}\\
   \vspace*{24pt}
-  \theauthor\\
+  \Large\theauthor\\
   \vspace*{24pt}
-  \thedate
-  
+  \large\thedate
   \end{center}
 \end{titlingpage}
 
-\includegraphics[width=\textwidth]{german_letter_dist.png}
+\begin{figure}
+  \fbox{\begin{subfigure}[t]{0.45\textwidth}  
+    \centering\includegraphics[width=\textwidth]{german_letter_dist.png}
+    \caption{test}
+  \end{subfigure}}\quad
+  \fbox{\begin{subfigure}[t]{0.45\textwidth}
+    \centering\includegraphics[width=\textwidth]{cesar_letter_dist.png}
+    \caption{cdefgh hahaha}
+  \end{subfigure}}
+\end{figure}
+
 
 Lösung:\\
 GLH SKBVLN EHVFKUHLEW QDWXUHUVFKHLQXQJHQ GXUFK EHREDFKWXQJHQ HASHULPHQWH XQG PDWKHPDWLVFKH PRGHOOH GXUFK GLH DXVZHUWXQJ YRQ GDWHQ ZHUGHQ JHVHWC XQG UHJHOQ HUNDQQW XQG YRUKHUVDJHQ JHWURIIHQ
