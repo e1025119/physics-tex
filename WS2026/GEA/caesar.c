@@ -12,6 +12,8 @@
 #define MODULO(a,b) ((a % b + b) % b)
 #define DOT '.'
 #define POUND '#'
+#define NUL '\0'
+#define BARSIZE 20
 
 /* print character distribution and return char with highest occurrence */
 int printCharDist(int*, bool);
@@ -55,7 +57,7 @@ int main(void) {
   printCharHist(charDist, charCnt);
   printf("\nMost frequent character: \'%c\'\n", max);
   
-  /* shift whole input by |max - 'E'|%26 */
+  /* shift input by |max - 'E'|%26 */
   int shift = (max - langMaxOcc) % ALPH;
 
   for (int i=0; i<SIZEIN; i++) {
@@ -64,7 +66,6 @@ int main(void) {
     }
     if (s[i] >= ASCIIA && s[i] <= ASCIIZ) {
       s[i] = MODULO(((s[i]-ASCIIA)-shift),ALPH)+ASCIIA;
-      //printf("shifted s[i]: %d, %c\n", s[i], s[i]);
     }
   }
 
@@ -89,11 +90,12 @@ int printCharDist(int *charDist, bool silent) {
 
 void printCharHist(int *charDist, int charCnt) {
   for (int i=0; i<ALPH; i++) {
-    char bar[33];
+    char bar[BARSIZE] = {0};
     
     int perc = charDist[i] > 0 ? round(((double)charDist[i]/charCnt)*HUNDRED) : 0;
     memset(bar, POUND, perc);
-    memset(bar+perc, DOT, (33-perc));
+    memset(bar+perc, DOT, (BARSIZE-perc));
+    bar[BARSIZE] = NUL;
     printf("%c |%s|\n", i+ASCIIA, bar);
   }
 }
